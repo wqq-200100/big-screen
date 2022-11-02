@@ -28,7 +28,7 @@ function updated() {
   let option = {
     backgroundColor: '',
     title: {
-      text: `{v|${dataValue}}{unit|%}\n{t|完成率}`,
+      text: `{v|${dataValue}}{unit|%}`,
       x: 'center',
       y: 'center',
       textStyle: {

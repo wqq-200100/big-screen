@@ -10,16 +10,13 @@ import {onMounted} from "vue";
 let myChart = null;
 let myChartRef = $ref();
 
-let result = [{ name: "22年1月", ai: 416649, ai2: 995004 },
-  { name: "22年2月", ai: 395992, ai2: 937604 },
-  { name: "22年3月", ai: 429375, ai2: 1055528 },
-  { name: "22年4月", ai: 437912, ai2: 978920 },
-  { name: "22年5月", ai: 441174, ai2: 928960 },
-  { name: "22年6月", ai: 391193, ai2: 932307 },
-  { name: "22年7月", ai: 551169, ai2: 1253081 },
-  { name: "22年8月", ai: 440622, ai2: 931956 },
-  { name: "22年9月", ai: 370788, ai2: 800851 },
-  { name: "22年10月", ai: 312339, ai2: 68951 }]
+let result = [{ name: "03-31", ai: 800, ai2: 489 },
+  { name: "04-01", ai: 676, ai2: 288 },
+  { name: "04-02", ai: 777, ai2: 177 },
+  { name: "04-03", ai: 878, ai2: 487 },
+  { name: "04-04", ai: 768, ai2: 277 },
+  { name: "04-05", ai: 777, ai2: 387 },
+  { name: "04-06", ai: 888, ai2: 478 }]
 
 let xData = result.map((item) => { return item.name });
 let keys = ['ai', 'ai2'], seriesData = [];
@@ -115,7 +112,7 @@ const option = {
       },
   "legend":
       {
-        "show": true,
+        "show": false,
         "top": 0,
         "right": 30,
         "itemWidth": 14,
@@ -126,7 +123,7 @@ const option = {
             {
               "padding": [0, 0, 0, 4],
               "fontSize": 15,
-              "color": "#AEC6DF"
+              "color": "#fff"
             }
       },
   "dataZoom": [

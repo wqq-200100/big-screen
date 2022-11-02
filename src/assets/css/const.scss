@@ -6,7 +6,6 @@
 .container {
   width: 3000px;
   height: 1080px;
-  border: 1px solid pink;
   display: flex;
   flex-direction: column;
   background: rgb(10, 10, 30);
@@ -14,6 +13,7 @@
   .main {
     flex: 3;
     border: 2px solid rgb(6, 158, 224);
+    //border-bottom:2px solid rgb(6, 158, 224) ;
 
 
     .dv-bg {

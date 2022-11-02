@@ -1,5 +1,5 @@
 <template>
-<!--右边折线图  -->
+<!--利用率折线图-->
   <div ref="myChartRef"  class="tubiao"></div>
 </template>
 
@@ -20,7 +20,10 @@ const option = {
     trigger: 'axis'
   },
   legend: {
-    data: ['cpu利用率','内存利用率']
+    data: ['cpu利用率','内存利用率'],
+    textStyle:{
+      color:'#fff'
+    }
   },
   grid: {
     left: '3%',
@@ -31,10 +34,20 @@ const option = {
   xAxis: {
     type: 'category',
     boundaryGap: false,
-    data: ['03-31', '04-01', '04-02', '04-03', '04-04', '04-05', '04-06']
+    data: ['03-31', '04-01', '04-02', '04-03', '04-04', '04-05', '04-06'],
+    axisLine:{
+      lineStyle:{
+        color:"#fff"
+      }
+    }
   },
   yAxis: {
-    type: 'value'
+    type: 'value',
+    axisLine:{
+      lineStyle:{
+        color:"#fff"
+      }
+    }
   },
   series: [
     {

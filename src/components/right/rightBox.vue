@@ -8,11 +8,9 @@
       <div class="label-title">云服务器ECS</div>
       <div class="label-title">裸金属服务器</div>
     </div>
-    <!--仪表盘右的数据-->
     <div class="meter">
-      <div class="meter-left">
-        <Dashboard :data-value="dataValue1"/>
-      </div>
+      <Dashboard class="dashboard" :data-value="dataValue1"/>
+    <!--仪表盘右的数据-->
       <div class="left-data">
         <div class="Stopped">
           <div class="num">0台</div>
@@ -24,8 +22,7 @@
         </div>
       </div>
       <div class="meter-right">
-        <Dashboard :data-value="dataValue2"/>
-
+        <Dashboard class="dashboard" :data-value="dataValue2"/>
       </div>
       <div class="right-data">
         <div class="Stopped">
@@ -78,14 +75,13 @@
     <div class="fUtilization-title">
       <div class="label-title">利用率</div>
       <div class="zhexian-left" style="height: 200px;width: 90%">
-        <rightBoxLineChart/>
+        <flow/>
       </div>
     </div>
-    <div class="zhexian">
-
+    <div class="flow">
       <div class="label-title">近一周流量峰值</div>
       <div class="zhexian-right">
-        <footMyTabel222/>
+        <utilization/>
       </div>
     </div>
   </div>
@@ -94,11 +90,9 @@
 <script setup>
 import Dashboard from "../../global/Dashboard.vue";
 import bar from "../../global/footMyTabel.vue";
-import rightBoxLineChart from "./rightBoxLineChart.vue";
+import flow from "./flow-bar.vue";
+import utilization from "./utilization-bar.vue";
 import boxTitle from "../../global/boxTitle.vue"
-import footMyTabel222 from "../../global/footMyTabel222.vue";
-
-
 
 let dataValue1 = $ref(99)
 let dataValue2 = $ref(67)
@@ -152,19 +146,18 @@ let lineChartData = $ref(
   .meter {
     display: flex;
     justify-content: space-around;
-    margin-top: 10px;
+    //margin-top: 10px;
 
-    .meter-left, .meter-right {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
+    .dashboard {
+      width: 170px;
+      height: 170px;
     }
 
     .left-data, .right-data {
-      font-size: 13px;
+      font-size: 16px;
       display: flex;
       flex-direction: column-reverse;
-      justify-content: space-between;
+      justify-content: space-around;
     }
   }
 
@@ -178,7 +171,7 @@ let lineChartData = $ref(
       margin-right: 30px;
 
       .mg {
-        margin-right: 10px;
+        margin-right: 80px;
       }
 
       .textColor {
@@ -209,9 +202,8 @@ let lineChartData = $ref(
     margin-top: 10px
   }
 
-  .zhexian {
-    .zhexian-left {
-    }
+  .flow {
+    margin-top: 30px;
   }
 }
 

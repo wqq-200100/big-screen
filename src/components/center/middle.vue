@@ -4,7 +4,7 @@
       <!-- 总览 -->
       <div class="main-table">
         <div v-for="(item,index) in tablesText" :key="index" small-bg>
-          <dv-decoration-11 style="width:170px;height:60px;color: white">
+          <dv-decoration-11 style="width:210px;height:80px;color: white">
             <div bg="~ dark/0" color-green font-600 class="bg-box">
               <img :src="`src/assets/image/role${index+1}.png`" alt="">
               <div class="bg-left">
@@ -37,12 +37,8 @@
         <div class="main-statistics">
           <div class="ChartLabel">
             <div class="chartName">资源管理中心</div>
+            <!--云-->
             <myCircle/>
-            <!--            <div class="beeline-box">
-                          <div class="cake cake-1">
-                            <div class="beeline"></div>
-                          </div>
-                        </div>-->
           </div>
         </div>
         <!--右边-->
@@ -90,7 +86,7 @@
         <div class="zhu-zhuang-tu" v-for="(item,i) in footTitle" :key="i">
 
           <div class="label-title">{{ item.title }}</div>
-          <div style="width: 100%;height: 200px" >
+          <div style="width: 100%;height: 200px">
             <myTable class="footMyTable" :colors="item.colors" :data="item.data" :name="item.name"/>
           </div>
 
@@ -100,11 +96,9 @@
   </div>
 </template>
 <script setup>
-
 import myTable from "../../global/footMyTabel.vue";
 import myCircle from "./myCircle.vue";
 import {Random} from "mockjs";
-import VScaleScreen from 'v-scale-screen'
 
 
 const tablesText = $ref([
@@ -115,8 +109,8 @@ const tablesText = $ref([
   {Hardware: '存储', count: '10800TB'}
 ])
 
-const mailable = Array(14).fill(1).map(i => Random.city() + '委办网')
-const mailable2 = Array(14).fill(1).map(i => Random.city() + '委办网')
+const mailable = Array(16).fill(1).map(i => Random.city() + '委办网')
+const mailable2 = Array(16).fill(1).map(i => Random.city() + '委办网')
 
 const footTitle = $ref([
   {
@@ -263,10 +257,10 @@ function onchange(index) {
       justify-content: space-between;
 
       .main-label {
-        margin-top: 20px;
+        margin-top: 50px;
 
         ::v-deep(.el-pagination) {
-          margin: 60px 20px 9px;
+          margin: 205px 20px 9px;
 
           button, li {
             color: #fff;
@@ -279,9 +273,9 @@ function onchange(index) {
         }
 
         .main-label-table {
-          width: 200px;
+          width: 240px;
           height: 280px;
-          margin: 29px 30px 0;
+          margin: 25px 18px 0;
           display: flex;
           align-content: flex-start;
           flex-flow: wrap;
@@ -290,8 +284,8 @@ function onchange(index) {
           .table-item {
             border: 2px solid rgb(6, 158, 224);
             border-radius: 5px;
-            width: 94px;
-            height: 33px;
+            width: 115px;
+            height: 45px;
             margin-bottom: 10px;
             color: white;
             line-height: 33px;
@@ -309,11 +303,11 @@ function onchange(index) {
       }
 
       .main-statistics {
-        width: 330px;
-        height: 330px;
+        width: 380px;
+        height: 380px;
         border: 10px solid rgb(13, 38, 74);
         border-radius: 50%;
-        margin-top: 60px;
+        margin-top: 100px;
         position: relative;
 
         .ChartLabel {
@@ -369,7 +363,7 @@ function onchange(index) {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: 5px;
+    margin-top: 42px;
     overflow: hidden;
 
     .first-table {

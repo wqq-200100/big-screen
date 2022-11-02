@@ -1,4 +1,5 @@
 <template>
+<!--云-->
   <div class="circle-box">
     <div class="circle box-1" v-for="(item,key) in data" :style="`transform: rotate(${72*key}deg)`">
       <div class="info" :style="`transform:translate(-50%, 50%) rotate(-${72*key}deg)`">
