@@ -1,96 +1,94 @@
 <template>
   <div>
-    <div>
-      <!-- 总览 -->
-      <div class="main-table">
-        <div v-for="(item,index) in tablesText" :key="index" small-bg>
-          <dv-decoration-11 style="width:210px;height:80px;color: white">
-            <div bg="~ dark/0" color-green font-600 class="bg-box">
-              <img :src="`src/assets/image/role${index+1}.png`" alt="">
-              <div class="bg-left">
-                <div>{{ item.Hardware }}</div>
-                <div class="num">{{ item.count }}</div>
-              </div>
-            </div>
-          </dv-decoration-11>
-        </div>
-      </div>
-
-      <div class="main-content">
-        <!--左边-->
-        <div class="main-label">
-          <div class="label-title">标题吃喜羊羊哈哈</div>
-          <div class="main-label-table">
-            <div v-for="(item,index) in mailable" :key="index" class="table-item" @click="onchange(index)"
-                 :class="{active:indexKey === index}">{{ item }}
+    <!-- 总览 -->
+    <div class="main-table">
+      <div v-for="(item,index) in tablesText" :key="index" small-bg>
+        <dv-decoration-11 style="width:210px;height:80px;color: white">
+          <div bg="~ dark/0" color-green font-600 class="bg-box">
+            <img :src="`src/assets/image/role${index+1}.png`" alt="">
+            <div class="bg-left">
+              <div>{{ item.Hardware }}</div>
+              <div class="num">{{ item.count }}</div>
             </div>
           </div>
-          <el-pagination
-              :total="50"
-              background
-              class="mt-4 bg"
-              layout="prev, pager, next"
-              small
-          />
-        </div>
-        <!--中间-->
-        <div class="main-statistics">
-          <div class="ChartLabel">
-            <div class="chartName">资源管理中心</div>
-            <!--云-->
-            <myCircle/>
-          </div>
-        </div>
-        <!--右边-->
-        <div class="main-label">
-          <div class="label-title">标题吃喜羊羊哈哈</div>
-          <div class="main-label-table">
-            <div v-for="(item,index) in mailable2" :key="index" class="table-item" @click="changeClick(index)"
-                 :class="{active:currentIndex === index}">{{ item }}
-            </div>
-          </div>
-          <el-pagination
-              :total="50"
-              background
-              class="mt-4 bg"
-              layout="prev, pager, next"
-              small
-          />
-        </div>
+        </dv-decoration-11>
       </div>
     </div>
 
-    <div>
-      <div class="foot">
-        <div class="zhu-zhuang-tu">
-          <div class="label-title">表格</div>
-          <div class="first-table">
-            <el-table id="my-table" :data="tableData">
-              <el-table-column prop="date" align="center" label="date" width="80"/>
-              <el-table-column label="cpu" align="center">
-                <el-table-column prop="cpu1" align="center" width="43"/>
-                <el-table-column prop="cpu2" align="center" width="43"/>
-              </el-table-column>
-              <el-table-column label="gpu" align="center">
-                <el-table-column prop="gpu1" align="center" width="43"/>
-                <el-table-column prop="gpu2" align="center" width="43"/>
-              </el-table-column>
-              <el-table-column label="qbb" align="center">
-                <el-table-column prop="qb1" align="center" width="43"/>
-                <el-table-column prop="qb2" align="center" width="43"/>
-              </el-table-column>
-
-            </el-table>
+    <div class="main-content">
+      <!--左边-->
+      <div class="main-label">
+        <div class="label-title">标题吃喜羊羊哈哈</div>
+        <div class="main-label-table">
+          <div v-for="(item,index) in mailable" :key="index" class="table-item" @click="onchange(index)"
+               :class="{active:indexKey === index}">{{ item }}
           </div>
         </div>
-        <div class="zhu-zhuang-tu" v-for="(item,i) in footTitle" :key="i">
-
-          <div class="label-title">{{ item.title }}</div>
-          <div style="width: 100%;height: 200px">
-            <myTable class="footMyTable" :colors="item.colors" :data="item.data" :name="item.name"/>
-          </div>
-
+        <el-pagination
+            :total="50"
+            background
+            class="mt-4 bg"
+            layout="prev, pager, next"
+            small
+        />
+      </div>
+      <!--中间-->
+      <div class="main-statistics">
+        <div class="ChartLabel">
+          <div class="chartName">资源管理中心</div>
+          <!--云-->
+          <myCircle/>
         </div>
+      </div>
+      <!--右边-->
+      <div class="main-label">
+        <div class="label-title">标题吃喜羊羊哈哈</div>
+        <div class="main-label-table">
+          <div v-for="(item,index) in mailable2" :key="index" class="table-item" @click="changeClick(index)"
+               :class="{active:currentIndex === index}">{{ item }}
+          </div>
+        </div>
+        <el-pagination
+            :total="50"
+            background
+            class="mt-4 bg"
+            layout="prev, pager, next"
+            small
+        />
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="foot">
+      <div class="zhu-zhuang-tu">
+        <div class="label-title">表格</div>
+        <div class="first-table">
+          <el-table id="my-table" :data="tableData">
+            <el-table-column prop="date" align="center" label="date" width="80"/>
+            <el-table-column label="cpu" align="center">
+              <el-table-column prop="cpu1" align="center" width="60"/>
+              <el-table-column prop="cpu2" align="center" width="60"/>
+            </el-table-column>
+            <el-table-column label="gpu" align="center">
+              <el-table-column prop="gpu1" align="center" width="60"/>
+              <el-table-column prop="gpu2" align="center" width="60"/>
+            </el-table-column>
+            <el-table-column label="qbb" align="center">
+              <el-table-column prop="qb1" align="center" width="60"/>
+              <el-table-column prop="qb2" align="center" width="60"/>
+            </el-table-column>
+
+          </el-table>
+        </div>
+      </div>
+      <div class="zhu-zhuang-tu" v-for="(item,i) in footTitle" :key="i">
+
+        <div class="label-title">{{ item.title }}</div>
+        <div style="width: 100%;height: 200px">
+          <myTable class="footMyTable" :colors="item.colors" :data="item.data" :name="item.name"/>
+        </div>
+
       </div>
     </div>
   </div>
