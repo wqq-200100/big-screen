@@ -67,16 +67,16 @@
           <el-table id="my-table" :data="tableData">
             <el-table-column prop="date" align="center" label="date" width="80"/>
             <el-table-column label="cpu" align="center">
-              <el-table-column prop="cpu1" align="center" width="60"/>
-              <el-table-column prop="cpu2" align="center" width="60"/>
+              <el-table-column prop="cpu1" align="center" />
+              <el-table-column prop="cpu2" align="center" />
             </el-table-column>
             <el-table-column label="gpu" align="center">
-              <el-table-column prop="gpu1" align="center" width="60"/>
-              <el-table-column prop="gpu2" align="center" width="60"/>
+              <el-table-column prop="gpu1" align="center" />
+              <el-table-column prop="gpu2" align="center" />
             </el-table-column>
             <el-table-column label="qbb" align="center">
-              <el-table-column prop="qb1" align="center" width="60"/>
-              <el-table-column prop="qb2" align="center" width="60"/>
+              <el-table-column prop="qb1" align="center" />
+              <el-table-column prop="qb2" align="center" />
             </el-table-column>
 
           </el-table>
