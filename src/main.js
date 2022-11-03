@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
-import './assets/css/style.css'
+import './assets/css/style.scss'
 import App from './App.vue'
 import DataVVue3 from "@kjgl77/datav-vue3";
 import ElementPlus from 'element-plus'

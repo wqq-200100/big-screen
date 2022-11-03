@@ -3,7 +3,7 @@
   <div ref="myChartRef"  class="tubiao"></div>
 </template>
 
-<script setup name="myTable">
+<script setup >
 import * as echarts from 'echarts'
 import {onMounted} from "vue";
 

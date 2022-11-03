@@ -1,5 +1,5 @@
 <template>
-<!--底部柱状图-->
+<!--流量风气值折线图-->
   <div ref="myChartRef" class="tubiao"></div>
 </template>
 
