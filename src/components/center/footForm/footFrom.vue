@@ -108,7 +108,7 @@ const tableData = $ref([
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 42px;
+  margin-top: 59px;
   overflow: hidden;
 
   .first-table {

@@ -14,14 +14,13 @@
 <script setup>
 import colum from "../../../global/footMyCoulum.vue";
 
-
 let lineChartData = $ref(
     {
       title: 'CPU',
       colors: [
-        '#b186a1',
-        '#664f97',
-        '#584572',
+        '#f6a992',
+        '#ec9b5a',
+        '#b26043',
       ],
       name: ["ssd存储", "FC存储", "分布式存储", "视频云存储"],
       data: [198, 39, 55, 121].sort((a, b) => a - b)
@@ -34,7 +33,7 @@ let lineChartData = $ref(
   margin-top: 30px;
 
   .aaa {
-    height: 100px;
+    height: 120px;
     margin-top: 15px;
   }
 }

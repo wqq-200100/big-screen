@@ -5,8 +5,8 @@
       <div class="label-title">裸金属服务器</div>
     </div>
     <div class="meter">
+      <!--   仪表盘左边   -->
       <Dashboard class="dashboard" :data-value="dataValue1"/>
-      <!--仪表盘右的数据-->
       <div class="left-data">
         <div class="Stopped">
           <div class="num">0台</div>
@@ -17,9 +17,9 @@
           <div>运行中</div>
         </div>
       </div>
-      <div class="meter-right">
-        <Dashboard class="dashboard" :data-value="dataValue2"/>
-      </div>
+
+      <!--   仪表盘右边   -->
+      <Dashboard class="dashboard" :data-value="dataValue2"/>
       <div class="right-data">
         <div class="Stopped">
           <div class="num">0台</div>
@@ -31,7 +31,8 @@
         </div>
       </div>
     </div>
-    <!--仪表盘下的数据-->
+
+    <!--仪表盘下面的数据-->
     <div class="memory">
       <div class="cpuNum">
         <div class="mg">
@@ -77,7 +78,6 @@ let dataValue2 = $ref(67)
   .meter {
     display: flex;
     justify-content: space-around;
-    //margin-top: 10px;
 
     .dashboard {
       width: 170px;
