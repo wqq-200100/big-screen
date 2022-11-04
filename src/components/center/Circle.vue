@@ -58,7 +58,6 @@ const data = $ref(
         justify-content: center;
         flex-direction: column;
         top: 10px;
-        //margin-top: 12px;
 
         p {
           font-size: 12px;

@@ -119,7 +119,7 @@ function onchange(index) {
   .main-statistics {
     width: 380px;
     height: 380px;
-    border: 10px solid rgb(13, 38, 74);
+    border: 20px solid rgb(13, 38, 74);
     border-radius: 50%;
     margin-top: 100px;
     position: relative;
