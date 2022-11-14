@@ -2,7 +2,7 @@
   <div class="main-content">
     <!--左边-->
     <div class="main-label">
-      <div class="label-title">标题吃喜羊羊哈哈</div>
+      <div class="label-title">市级资源使用部门信息</div>
       <div class="main-label-table">
         <div v-for="(item,index) in mailable" :key="index" class="table-item" @click="onchange(index)"
              :class="{active:indexKey === index}">{{ item }}
@@ -26,7 +26,7 @@
     </div>
     <!--右边-->
     <div class="main-label">
-      <div class="label-title">标题吃喜羊羊哈哈</div>
+      <div class="label-title">区（市）县资源使用部门信息</div>
       <div class="main-label-table">
         <div v-for="(item,index) in mailable2" :key="index" class="table-item" @click="changeClick(index)"
              :class="{active:currentIndex === index}">{{ item }}
@@ -48,8 +48,48 @@ import {Random} from "mockjs";
 import myCircle from "../Circle.vue";
 
 
-const mailable = Array(16).fill(1).map(i => Random.city() + '委办网')
-const mailable2 = Array(16).fill(1).map(i => Random.city() + '委办网')
+// const mailable = Array(16).fill(1).map(i => Random.city() + '委办网')
+const mailable = $ref([
+  '市法院',
+  '市检察院',
+  '市委办公厅',
+  '市人大常委会办公厅',
+  '市政府办公厅',
+  '市政协办公厅',
+  '市委组织部',
+  '市委宣传部',
+  '市委统战部',
+  '市委政法委',
+  '市委政研室',
+  '市委社治委',
+  '市委网信办',
+  '市委外事办',
+  '市政府外办',
+  '市委编办',
+
+])
+
+// const mailable2 = Array(16).fill(1).map(i => Random.city() + '委办网')
+const mailable2 = $ref([
+  '市直机关工委',
+  '市委巡察办',
+  '市委保密机要局',
+  '市委老干部局',
+  '市委党史研究室',
+  '市委党校',
+  '市发改委',
+  '市经信局',
+  '市教育局',
+  '市委教育工委',
+  '市科技局',
+  '市民宗局',
+  '市公安局',
+  '市民政局',
+  '市司法局',
+  '市人社局'
+])
+
+
 let currentIndex = $ref('')
 let indexKey = $ref('')
 
