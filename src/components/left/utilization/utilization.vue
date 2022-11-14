@@ -51,7 +51,7 @@ let datavaluearr = $ref([
     name: "CPU",
     type: "核",
     undistributed: 0,
-    allocated: 35422,
+    allocated: 3542,
     const: 0,
   },
   {
@@ -99,7 +99,7 @@ let datavaluearr = $ref([
             font-size: 15px;
           }
           div{
-            font-size: 20px;
+            font-size: 16px;
             span{
               font-size: 12px;
             }

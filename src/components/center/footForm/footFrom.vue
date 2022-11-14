@@ -2,7 +2,7 @@
   <div class="foot">
     <!--   表格   -->
     <div class="zhu-zhuang-tu">
-      <div class="label-title">表格</div>
+      <div class="label-title">资源动态伸缩</div>
       <div class="first-table">
 <!--        <el-table :data="tableData" border style="width: 100%" :header-cell-style="headerMethod">-->
 <!--          <el-table-column prop="date" label="Date" width="80" />-->
@@ -100,37 +100,37 @@ function headerMethod({row,columnIndex,rowIndex}) {
 
 const tableData = $ref([
   {
-    date: '2022/10/23',
-    cpu1: 222,
-    cpu2: 333,
-    gpu1: 9090,
-    gpu2: 'ax',
-    qb1: 300,
-    qb2: 'ii',
+    date: '2018-12',
+    cpu1: 58,
+    cpu2: 89,
+    gpu1: 172,
+    gpu2: 129,
+    qb1: 492,
+    qb2: 344,
   }, {
-    date: '2022/10/24',
+    date: '2019-01',
     cpu1: 44,
     cpu2: 77,
-    gpu1: 1111,
-    gpu2: 'ijd',
+    gpu1: 111,
+    gpu2: 231,
     qb1: 229,
-    qb2: 'sd',
+    qb2: 122,
   }, {
-    date: '2022/10/25',
+    date: '2019-02',
     cpu1: 100,
-    cpu2: 'kdx',
-    gpu1: 999,
+    cpu2: 93,
+    gpu1: 31,
     gpu2: 90,
     qb1: 23,
     qb2: 399,
   }, {
-    date: '2022/10/26',
-    cpu1: '完全',
-    cpu2: '胃口的',
-    gpu1: '看完',
-    gpu2: '几位',
-    qb1: '等我',
-    qb2: '开始',
+    date: '2019-03',
+    cpu1: 412,
+    cpu2: 521,
+    gpu1: 142,
+    gpu2: 123,
+    qb1: 421,
+    qb2: 132,
   },
 ])
 </script>
