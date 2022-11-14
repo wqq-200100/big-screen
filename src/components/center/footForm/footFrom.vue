@@ -4,29 +4,20 @@
     <div class="zhu-zhuang-tu">
       <div class="label-title">资源动态伸缩</div>
       <div class="first-table">
-<!--        <el-table :data="tableData" border style="width: 100%" :header-cell-style="headerMethod">-->
-<!--          <el-table-column prop="date" label="Date" width="80" />-->
-<!--          <el-table-column prop="cpu1" label="Name" width="80" />-->
-<!--          <el-table-column prop="cpu2" label="Address" />-->
-<!--          <el-table-column prop="qb1" label="Address" />-->
-<!--          <el-table-column prop="qb2" label="Address" />-->
-<!--          <el-table-column prop="qb2" label="Address" />-->
-<!--          <el-table-column prop="qb2" label="Address" />-->
-<!--        </el-table>-->
         <el-table id="my-table" :data="tableData" >
           <el-table-column prop="date" align="center" label="年-月" width="80"/>
 
-          <el-table-column label="cpu（核）" align="center">
+          <el-table-column label="↓ cpu（核）↑" align="center">
             <el-table-column prop="cpu1" align="center"/>
             <el-table-column prop="cpu2" align="center"/>
           </el-table-column>
 
-          <el-table-column label="内存（GB）" align="center">
+          <el-table-column label="↓ 内存（GB）↑" align="center">
             <el-table-column prop="gpu1" align="center"/>
             <el-table-column prop="gpu2" align="center"/>
           </el-table-column>
 
-          <el-table-column label="存储（GB）" align="center">
+          <el-table-column label="↓ 存储（GB）↑" align="center">
             <el-table-column prop="qb1" align="center"/>
             <el-table-column prop="qb2" align="center"/>
           </el-table-column>
@@ -77,26 +68,6 @@ const footTitle = $ref([
     data: [100, 133, 155, 121, 159, 123].sort((a, b) => a - b)
   },
 ])
-
-function objectSpanMethod({row, column, rowIndex, columnIndex}) {
-  if (rowIndex % 2 === 0) {
-    if (columnIndex === 0) {
-      return [1, 2];
-    } else if (columnIndex === 1) {
-      return [0, 0];
-    }
-  }
-}
-
-function headerMethod({row,columnIndex,rowIndex}) {
-  if (row[0].level === 1) {
-    row[1].colSpan = 0;
-    row[2].colSpan = 2;
-    if (columnIndex === 0) {
-      return { display: "none" };
-    }
-  }
-}
 
 const tableData = $ref([
   {
